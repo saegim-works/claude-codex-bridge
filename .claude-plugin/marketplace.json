@@ -1,0 +1,13 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "codex-bridge",
+  "owner": { "name": "9gwf2zqhjs-arch", "url": "https://github.com/9gwf2zqhjs-arch" },
+  "plugins": [
+    {
+      "name": "codex-bridge",
+      "source": "./",
+      "description": "Claude × Codex: read-only cross review and second opinions via Codex CLI.",
+      "version": "0.1.0"
+    }
+  ]
+}

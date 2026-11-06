@@ -1,0 +1,10 @@
+{
+  "name": "codex-bridge",
+  "version": "0.1.0",
+  "description": "Use OpenAI Codex CLI as a read-only second brain inside Claude Code: /codex-bridge:codex-review (implement → Codex review → fix/rebut, up to 3 rounds) and /codex-bridge:duo (opinion / idea / verify).",
+  "author": { "name": "9gwf2zqhjs-arch", "url": "https://github.com/9gwf2zqhjs-arch" },
+  "homepage": "https://github.com/9gwf2zqhjs-arch/claude-codex-bridge",
+  "repository": "https://github.com/9gwf2zqhjs-arch/claude-codex-bridge",
+  "license": "MIT",
+  "keywords": ["codex", "code-review", "second-opinion", "claude-code"]
+}

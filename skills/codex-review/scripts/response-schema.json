@@ -1,0 +1,43 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["verdict", "summary", "findings", "open_questions", "reviewed_files"],
+  "properties": {
+    "verdict": {
+      "type": "string",
+      "enum": ["pass", "changes_requested", "user_decision_needed"],
+      "description": "pass = 그대로 진행 가능. changes_requested = 코드/문서 수정이 필요. user_decision_needed = 요구사항 자체가 모호하거나 트레이드오프라 사람이 정해야 함."
+    },
+    "summary": {
+      "type": "string",
+      "description": "한국어 3줄 이내 총평."
+    },
+    "reviewed_files": {
+      "type": "array",
+      "description": "실제로 열어서 읽은 파일 경로. 읽지 않았으면 빈 배열.",
+      "items": { "type": "string" }
+    },
+    "findings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["severity", "file", "lines", "issue", "evidence", "required_action", "confidence"],
+        "properties": {
+          "severity": { "type": "string", "enum": ["blocker", "major", "minor", "nit"] },
+          "file": { "type": "string", "description": "프로젝트 루트 기준 상대 경로. 특정 파일이 아니면 '-'." },
+          "lines": { "type": "string", "description": "예: '120-134'. 모르면 '-'." },
+          "issue": { "type": "string", "description": "무엇이 문제인지 한 문장." },
+          "evidence": { "type": "string", "description": "실제 코드/출력 인용 등 근거. 추측이면 추측이라고 명시." },
+          "required_action": { "type": "string", "description": "필요한 조치." },
+          "confidence": { "type": "string", "enum": ["high", "medium", "low"] }
+        }
+      }
+    },
+    "open_questions": {
+      "type": "array",
+      "description": "사용자 판단이 필요한 질문.",
+      "items": { "type": "string" }
+    }
+  }
+}
