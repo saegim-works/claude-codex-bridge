@@ -1,7 +1,7 @@
 {
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "codex-bridge",
-  "owner": { "name": "9gwf2zqhjs-arch", "url": "https://github.com/9gwf2zqhjs-arch" },
+  "owner": { "name": "saegim-works", "url": "https://github.com/saegim-works" },
   "plugins": [
     {
       "name": "codex-bridge",

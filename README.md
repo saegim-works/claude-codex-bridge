@@ -28,7 +28,7 @@ Claude does the work; Codex reviews, disagrees, or double-checks — and Claude 
 ## Install
 
 ```
-/plugin marketplace add 9gwf2zqhjs-arch/claude-codex-bridge
+/plugin marketplace add saegim-works/claude-codex-bridge
 /plugin install codex-bridge@codex-bridge
 ```
 
